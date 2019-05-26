@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AModule } from './A/a.module';
 import { BModule } from './B/b.module';
+import { ComponentsExampleModule } from './components-example/components-example.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { BModule } from './B/b.module';
   imports: [
     BrowserModule,
     AModule,
-    BModule
+    BModule,
+    ComponentsExampleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

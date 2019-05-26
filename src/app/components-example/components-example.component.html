@@ -1,0 +1,26 @@
+<span style="font-size: 2em">
+    <h1> Component Example </h1>
+    <h3> Data Binding</h3>
+    <ol>
+        <li>
+            Data Interpolation : {{name}}
+        </li>
+        <li>
+            Property Binding :<p [id]="color" style="display:inline"> Color</p>
+        </li>
+        <li>
+            <div>
+                Event Binding :
+                <button (click)='changeValue(counter-1)'>-</button>
+                <p style="display:inline"> {{counter}} </p>
+                <button (click)='changeValue(counter+1)'>+</button>
+            </div>
+        </li>
+        <li>
+            <div>
+                Two Way Binding :
+                <input type="number" [(ngModel)]='counter' style="font-size: 1em; width: 3em;" />
+            </div>
+        </li>
+    </ol>
+</span>
