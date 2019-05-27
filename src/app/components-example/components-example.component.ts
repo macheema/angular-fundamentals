@@ -14,7 +14,7 @@ export class ComponentsExampleComponent {
     public color: string;
     private colors: string[] = ['green', 'red', 'blue'];
 
-    public counter = 0;
+    public counter = 1;
     constructor() {
         this.interpolation();
         this.proprtybinding();

@@ -22,5 +22,15 @@
                 <input type="number" [(ngModel)]='counter' style="font-size: 1em; width: 3em;" />
             </div>
         </li>
+        <li>
+            <div>
+                Pipe : {{counter | sqr}}
+            </div>
+        </li>
+        <li>
+            <div [fontsize]='25'>
+                Directive Font Size : {{counter}}
+            </div>
+        </li>
     </ol>
 </span>
