@@ -5,6 +5,10 @@ import { AppComponent } from './app.component';
 import { AModule } from './A/a.module';
 import { BModule } from './B/b.module';
 import { ComponentsExampleModule } from './components-example/components-example.module';
+import { RoutingExampleModule } from './routing-example/routing-example.module';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -12,9 +16,12 @@ import { ComponentsExampleModule } from './components-example/components-example
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AModule,
     BModule,
-    ComponentsExampleModule
+    ComponentsExampleModule,
+    RoutingExampleModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
