@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 
-import { LoggerService }  from './logger.service';
+import { LoggerService } from './logger.service';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'spy-parent',
   templateUrl: './spy.component.html',
   styles: [
-     '.parent {background: khaki;}',
-     '.heroes {background: LightYellow; padding: 0 8px}'
+    '.parent {background: khaki;}',
+    '.heroes {background: LightYellow; padding: 0 8px}'
   ],
-  providers:  [LoggerService]
+  providers: [LoggerService]
 })
 export class SpyParentComponent {
   newName = 'Herbie';
