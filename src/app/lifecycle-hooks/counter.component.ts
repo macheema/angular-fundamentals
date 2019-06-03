@@ -3,7 +3,7 @@ import {
   OnChanges, SimpleChanges,
 } from '@angular/core';
 
-import { LoggerService }  from './logger.service';
+import { LoggerService } from './logger.service';
 
 @Component({
   selector: 'app-counter',
@@ -12,7 +12,7 @@ import { LoggerService }  from './logger.service';
     Counter = {{counter}}
 
     <h5>-- Counter Change Log --</h5>
-    <div *ngFor="let chg of changeLog" mySpy>{{chg}}</div>
+    <div *ngFor="let chg of changeLog">{{chg}}</div>
   </div>
   `,
   styles: ['.counter {background: LightYellow; padding: 8px; margin-top: 8px}']
@@ -30,14 +30,15 @@ export class MyCounterComponent implements OnChanges {
     }
 
     // A change to `counter` is the only change we care about
-    let chng = changes['counter'];
-    let cur = chng.currentValue;
-    let prev = JSON.stringify(chng.previousValue); // first time is {}; after is integer
+    const chng = changes['counter'];
+    const cur = chng.currentValue;
+    const prev = JSON.stringify(chng.previousValue); // first time is {}; after is integer
     this.changeLog.push(`counter: currentValue = ${cur}, previousValue = ${prev}`);
   }
 }
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'counter-parent',
   template: `
    <div class="parent">
