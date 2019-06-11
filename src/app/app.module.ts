@@ -8,7 +8,6 @@ import { ComponentsExampleModule } from './components-example/components-example
 import { RoutingExampleModule } from './routing-example/routing-example.module';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-import { LifeCycleModule } from './lifecycle-hooks/lifecycle.module';
 
 
 @NgModule({
@@ -22,8 +21,7 @@ import { LifeCycleModule } from './lifecycle-hooks/lifecycle.module';
     BModule,
     ComponentsExampleModule,
     RoutingExampleModule,
-    AppRoutingModule,
-    LifeCycleModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
